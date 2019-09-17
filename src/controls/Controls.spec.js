@@ -39,6 +39,7 @@ describe('<Controls />', () => {
 
 	('closed, locked', () => {
 		const unlockSpy = jest.fn();
+		//will check when gate is closed and locked
 		const { queryByText } = render(<Controls locked={true} closed={true} toggleLocked={unlockSpy} />);
 		const unlockButton = queryByText('Unlock Gate');
 		expect(unlockButton);
